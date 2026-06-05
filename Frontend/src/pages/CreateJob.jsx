@@ -14,7 +14,9 @@ const CreateJob = () => {
     description: "",
     location: "",
     salary: "",
-    skills: ""
+    skills: "",
+    jobType: "",
+    workMode: ""
   });
 
   const handleChange = (e) => {
@@ -44,8 +46,11 @@ const CreateJob = () => {
         salary: formData.salary,
         skillsRequired: formData.skills
           .split(",")
-          .map((skill) => skill.trim())
+          .map((skill) => skill.trim()),
+           jobType: formData.jobType,
+           workMode: formData.workMode
       };
+       
 
       await axios.post(
         "https://job-portal-qo3w.onrender.com/job/createjob",
@@ -199,6 +204,43 @@ const CreateJob = () => {
               className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-500"
             />
 
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Job Type
+            </label>
+
+            <select
+              name="jobType"
+              value={formData.jobType}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-500"
+            >
+              <option value="">Select Job Type</option>
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Internship">Internship</option>
+              <option value="Contract">Contract</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Work Mode
+            </label>
+
+            <select
+              name="workMode"
+              value={formData.workMode}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-500"
+            >
+              <option value="">Select Work Mode</option>
+              <option value="Remote">Remote</option>
+              <option value="On-site">On-site</option>
+              <option value="Hybrid">Hybrid</option>
+            </select>
           </div>
 
           {/* Skills */}

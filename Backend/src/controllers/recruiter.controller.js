@@ -506,7 +506,9 @@ export const updateJob = async (req, res) => {
   description,
   location,
   salary,
-  skillsRequired
+  skillsRequired,
+  jobType,
+  workMode
 } = req.body;
 
 const updatedJob = await jobModel.findByIdAndUpdate(
@@ -517,7 +519,9 @@ const updatedJob = await jobModel.findByIdAndUpdate(
     description,
     location,
     salary,
-    skillsRequired
+    skillsRequired,
+    jobType,
+    workMode
   },
   { new: true }
 );
