@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://job-portal-seven-neon.vercel.app/"
+    "https://job-portal-seven-neon.vercel.app"
   ],
   credentials: true
 }));
