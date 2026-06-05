@@ -193,8 +193,12 @@ const RecruiterDashboard = () => {
 
           <div>
 
+             <h2 className="text-blue-600 font-bold text-xl mb-2">
+              TalentBridge
+            </h2>
+
             <h1 className="text-4xl font-bold text-gray-800">
-              Welcome, {recruiter.username || "User"}
+              Welcome back, {recruiter.username || "User"}
             </h1>
 
             <p className="text-gray-500 mt-2">
