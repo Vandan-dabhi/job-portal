@@ -30,10 +30,11 @@ export const registerUser = async (req,res) => {
       },process.env.JWT_SECRET)
 
      res.cookie("token", token, {
-        httpOnly: true,
-        secure: false,
-        sameSite: "lax"
-});
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+      maxAge: 7 * 24 * 60 * 60 * 1000
+    });
 
       res.status(201).json({
         message:"user created successfully",
@@ -75,7 +76,12 @@ export const loginUser = async (req,res) => {
         id:user._id
       },process.env.JWT_SECRET)
 
-      res.cookie("token",token);
+     res.cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+      maxAge: 7 * 24 * 60 * 60 * 1000
+    });
       
       res.status(200).json({
         message:"logged in successfully",
@@ -94,7 +100,11 @@ export const loginUser = async (req,res) => {
 
 export const logoutUser = async (req,res) => {
     try{
-      res.clearCookie("token");
+     res.clearCookie("token", {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none"
+    });
 
       res.status(200).json({
          message:"logout successfully"
