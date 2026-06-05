@@ -21,7 +21,7 @@ const RecruiterApplications = () => {
     try {
 
       const res = await axios.get(
-        `http://localhost:3000/recruiter/applications/${jobId}`,
+        `https://job-portal-qo3w.onrender.com/recruiter/applications/${jobId}`,
         {
           withCredentials: true
         }
@@ -48,7 +48,7 @@ const RecruiterApplications = () => {
     try {
 
       await axios.patch(
-        `http://localhost:3000/recruiter/application/status/${applicationId}`,
+        `https://job-portal-qo3w.onrender.com/recruiter/application/status/${applicationId}`,
         { status },
         {
           withCredentials: true
@@ -76,7 +76,7 @@ const RecruiterApplications = () => {
   try {
 
     await axios.patch(
-      `http://localhost:3000/recruiter/application/status/${applicationId}`,
+      `https://job-portal-qo3w.onrender.com/recruiter/application/status/${applicationId}`,
       {
         status:"reviewed"
       },

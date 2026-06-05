@@ -44,7 +44,7 @@ const RecruiterDashboard = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:3000/recruiter/dashboard",
+        "https://job-portal-qo3w.onrender.com/recruiter/dashboard",
         {
           withCredentials: true
         }
@@ -69,7 +69,7 @@ const RecruiterDashboard = () => {
   try {
 
     const res = await axios.get(
-      `http://localhost:3000/recruiter/jobs?search=${search}&page=${page}`,
+      `https://job-portal-qo3w.onrender.com/recruiter/jobs?search=${search}&page=${page}`,
       {
         withCredentials:true
       }
@@ -95,7 +95,7 @@ const RecruiterDashboard = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:3000/recruiter/stats",
+        "https://job-portal-qo3w.onrender.com/recruiter/stats",
         {
           withCredentials: true
         }
@@ -120,7 +120,7 @@ const RecruiterDashboard = () => {
   try{
 
     await axios.delete(
-      `http://localhost:3000/recruiter/job/${jobId}`,
+      `https://job-portal-qo3w.onrender.com/recruiter/job/${jobId}`,
       {
         withCredentials:true
       }
@@ -149,7 +149,7 @@ const RecruiterDashboard = () => {
     try {
 
       await axios.post(
-        "http://localhost:3000/auth/logout",
+        "https://job-portal-qo3w.onrender.com/auth/logout",
         {},
         {
           withCredentials: true

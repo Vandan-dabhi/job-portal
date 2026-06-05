@@ -48,7 +48,7 @@ const CreateJob = () => {
       };
 
       await axios.post(
-        "http://localhost:3000/job/createjob",
+        "https://job-portal-qo3w.onrender.com/job/createjob",
         payload,
         {
           withCredentials: true

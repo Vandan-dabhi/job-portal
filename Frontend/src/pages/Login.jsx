@@ -19,7 +19,7 @@ const LoginPage = () => {
     try {
 
       await axios.post(
-        "http://localhost:3000/auth/login",
+        "https://job-portal-qo3w.onrender.com/auth/login",
         {
           usernameoremail,
           password

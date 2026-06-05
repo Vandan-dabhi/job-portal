@@ -32,7 +32,7 @@ const EditJob = () => {
     try {
 
       const res = await axios.get(
-        `http://localhost:3000/job/getsinglejob/${id}`,
+        `https://job-portal-qo3w.onrender.com/job/getsinglejob/${id}`,
         {
           withCredentials: true
         }
@@ -89,7 +89,7 @@ const EditJob = () => {
       };
 
       await axios.put(
-        `http://localhost:3000/recruiter/job/${id}`,
+        `https://job-portal-qo3w.onrender.com/recruiter/job/${id}`,
         payload,
         {
           withCredentials: true

@@ -17,7 +17,7 @@ const JobDetails = () => {
     try {
 
       const res = await axios.get(
-        `http://localhost:3000/job/getsinglejob/${id}`,
+        `https://job-portal-qo3w.onrender.com/job/getsinglejob/${id}`,
         {
           withCredentials: true
         }

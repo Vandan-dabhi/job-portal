@@ -54,7 +54,7 @@ const Dashboard = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:3000/job/getDashboardStats",
+        "https://job-portal-qo3w.onrender.com/job/getDashboardStats",
         {
           withCredentials: true
         }
@@ -89,7 +89,7 @@ const Dashboard = () => {
       setLoading(true);
 
       const res = await axios.get(
-        `http://localhost:3000/job/readjob?search=${search}&page=${page}`,
+        `https://job-portal-qo3w.onrender.com/job/readjob?search=${search}&page=${page}`,
         {
           withCredentials: true
         }
@@ -148,7 +148,7 @@ const Dashboard = () => {
     }
 
     await axios.post(
-      "http://localhost:3000/recruiter/become-recruiter",
+      "https://job-portal-qo3w.onrender.com/recruiter/become-recruiter",
       { companyName },
       {
         withCredentials: true
@@ -179,7 +179,7 @@ const Dashboard = () => {
     try {
 
       await axios.post(
-        "http://localhost:3000/auth/logout",
+        "https://job-portal-qo3w.onrender.com/auth/logout",
         {},
         {
           withCredentials: true
@@ -217,7 +217,7 @@ const Dashboard = () => {
       formData.append("coverLetter", coverLetter);
 
       await axios.post(
-        `http://localhost:3000/application/apply/${selectedJob._id}`,
+        `https://job-portal-qo3w.onrender.com/application/apply/${selectedJob._id}`,
         formData,
         {
           withCredentials: true,

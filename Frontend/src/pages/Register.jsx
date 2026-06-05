@@ -17,7 +17,7 @@ const Register = () => {
 
     try {
       await axios.post(
-        "http://localhost:3000/auth/register",
+        "https://job-portal-qo3w.onrender.com/auth/register",
         {
           username,
           email,

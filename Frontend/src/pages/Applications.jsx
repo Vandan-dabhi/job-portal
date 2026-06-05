@@ -15,7 +15,7 @@ const Applications = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:3000/application/getApplications",
+        "https://job-portal-qo3w.onrender.com/application/getApplications",
         {
           withCredentials: true
         }
