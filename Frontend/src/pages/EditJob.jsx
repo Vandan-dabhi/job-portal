@@ -294,8 +294,8 @@ const EditJob = () => {
             className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-500"
           >
             <option value="">Select Job Type</option>
-            <option value="Full-time">Full Time</option>
-            <option value="Part-time">Part Time</option>
+            <option value="Full Time">Full Time</option>
+            <option value="Part Time">Part Time</option>
             <option value="Internship">Internship</option>
           </select>
         </div>
@@ -313,7 +313,7 @@ const EditJob = () => {
             >
               <option value="">Select Work Mode</option>
               <option value="Remote">Remote</option>
-              <option value="On-site">Onsite</option>
+              <option value="Onsite">Onsite</option>
               <option value="Hybrid">Hybrid</option>
             </select>
           </div>
